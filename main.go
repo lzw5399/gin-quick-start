@@ -6,10 +6,6 @@ import (
 
 func main() {
 	r := gin.Default()
-	auth := r.Group("/admin", gin.BasicAuth(gin.Accounts{
-		"foo":    "bar",
-		"austin": "12234",
-	}))
 
 	r.GET("/json", json)
 	r.GET("/asciiJSON", asciiJSON)

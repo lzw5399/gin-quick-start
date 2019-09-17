@@ -14,6 +14,9 @@ var secrets = gin.H{
 
 func main() {
 	r := gin.Default()
+	r.Use(func(c *gin.Context) {
+
+	})
 
 	auth := r.Group("/admin", gin.BasicAuth(gin.Accounts{
 		"foo":    "bar",
