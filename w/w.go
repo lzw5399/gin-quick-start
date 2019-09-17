@@ -24,5 +24,5 @@ func main() {
 
 		c.DataFromReader(http.StatusOK, contentLength, contentType, reader, extraHeaders)
 	})
-	router.Run(":8080")
+	_ = router.Run(":8080")
 }
