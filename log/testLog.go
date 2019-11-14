@@ -27,5 +27,9 @@ func main() {
 		c.String(200, "pong")
 	})
 
+	router.POST("/user", func(c *gin.Context) {
+		c.PureJSON(200, 233)
+	})
+
 	router.Run(":8081")
 }
